@@ -1,0 +1,180 @@
+/* Base styles for all devices */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f8;
+  color: #333;
+}
+
+.App {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1.3px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.textfeild {
+  flex-grow: 1;
+  font-size: 1.1rem;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #bdc3c7;
+  transition: border-color 0.3s ease;
+}
+
+.textfeild:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+.submit-btn {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 13px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.35);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+  box-shadow: 0 8px 20px rgba(41, 128, 185, 0.6);
+}
+
+.file-manager-container {
+  border-top: 2px solid #ecf0f1;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.file-manager {
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #d1d8e0;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.file-manager h3 {
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  color: #34495e;
+  border-bottom: 1px solid #dcdde1;
+  padding-bottom: 8px;
+}
+
+.file-manager > div {
+  margin-bottom: 18px;
+}
+
+.file-manager strong {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.05rem;
+}
+
+.file-manager pre {
+  background: #ecf0f1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #2f3640;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.download-btn {
+  align-self: flex-start;
+  background-color: #27ae60;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.35);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #219150;
+  box-shadow: 0 9px 25px rgba(33, 145, 80, 0.6);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .App {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+    letter-spacing: normal;
+  }
+
+  .form-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .textfeild {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .file-manager {
+    max-height: 300px;
+    font-size: 0.9rem;
+  }
+
+  .file-manager strong {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 10px;
+  }
+}

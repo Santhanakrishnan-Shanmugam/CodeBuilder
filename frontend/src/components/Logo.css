@@ -1,0 +1,26 @@
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #2d3436;
+  position: relative;
+}
+
+.logo span {
+  color: #0984e3; /* Highlight "Mind" */
+}
+
+/* Add glowing effect for innovation feel */
+.logo::after {
+  content: "💡";
+  font-size: 32px;
+  position: absolute;
+  right: -45px;
+  top: 0;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { opacity: 0.3; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.2); }
+}

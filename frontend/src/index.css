@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* stack logo and text */
+  align-items: center;   /* center horizontally */
+  justify-content: center; /* center vertically */
+  height: 10vh; /* full screen height */
+  text-align: center;
+}

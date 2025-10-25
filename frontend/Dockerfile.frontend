@@ -1,0 +1,22 @@
+# Build stage: Use local Alpine with NodeJS
+FROM node:20.7.0-alpine3.18 AS build
+
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . ./
+RUN npm run build
+
+# Production stage: Use local Nginx base image or a simple Alpine + Nginx install
+FROM alpine:3.18
+
+# Install Nginx manually
+RUN apk add --no-cache nginx
+
+# Copy build output
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
