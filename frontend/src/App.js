@@ -12,7 +12,7 @@ function App() {
   const fetchFiles = async () => {
     try {
       const payload={query:query}
-      const response = await axios.post("http://localhost:8000/get-file-content",payload);
+      const response = await axios.post("http://34.69.158.237:8000/get-file-content",payload);
       setFiles(response.data.files); 
     } catch (error) {
       console.error("Error fetching project files:", error);
