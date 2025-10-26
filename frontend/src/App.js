@@ -12,14 +12,14 @@ function App() {
   const fetchFiles = async () => {
     try {
       const payload={query:query}
-      const response = await axios.post("http://34.69.158.237:8000/get-file-content",payload);
+      const response = await axios.post("http://127.0.0.1:8000/get-file-content",payload);
       setFiles(response.data.files); 
     } catch (error) {
       console.error("Error fetching project files:", error);
     }
   };
 
-  
+  //codebuilder-447025990763.asia-south1.run.app
   const handleDownload = async () => {
     try {
       const response = await axios.get("http://localhost:8000/download-project", {
